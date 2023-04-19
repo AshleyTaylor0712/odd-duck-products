@@ -5,6 +5,11 @@
 main {
   width: 80%;
   margin: 3rem auto;
+  color: rgb(232, 211, 16);
+}
+
+#myChart {
+  grid-area: 4 / 4 / 6 / 6;
 }
 
 .container {
@@ -19,7 +24,7 @@ main {
 .container div {
   background-color: lightgray;
   margin: .5rem;
-  border: 1px solid black;
+  border: 1px solid rgb(21, 21, 226);
   /* flex: 1 1 20%; */
 }
 
