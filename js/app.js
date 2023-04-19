@@ -14,7 +14,7 @@ let image1 = document.querySelector('section img:first-child');
 let image2 = document.querySelector('section img:nth-child(2)');
 let image3 = document.querySelector('section img:nth-child(3)');
 
-let viewResultsBtn = document.querySelector('section ~ div');
+let viewResultsBtn = document.getElementById('resultsButton');
 
 let counter = 0;
 let maxCounter = 25;
@@ -102,8 +102,9 @@ function handleProductClick(event) {
 }
 
 function viewResults() {
+  console.log('we are inside view results function.');
   let ul = document.querySelector('ul');
-  for (let i = 0; i < ProductArray.length; i++) {
+  for (let i = 0; i < productArray.length; i++) {
     let li = document.createElement('li');
     li.textContent = `${productArray[i].name} had ${productArray[i].views} views, and ${productArray[i].votes} votes.`;
     ul.appendChild(li);

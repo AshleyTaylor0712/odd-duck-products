@@ -57,7 +57,11 @@ h1 {
 }
 
 #ducklogo {
-  width: 300px;
+  width: 200px;
+	height: 250px;
+	border-radius: 50%;
+  margin-left: 50px;
+  
 }
 
 section {
@@ -101,12 +105,12 @@ ul {
 }
 
 /* -- button -- */
-section + div {
-  background-color: rgba(128, 128, 128, 0.734);
-  color: lightgrey;
+section + button {
+  background-color:rgba(84, 162, 85, 0.749);
+  color: white;
   padding: .5rem 1rem;
   width: max-content;
   height: max-content;
-  font-size: .8rem;
+  font-size: 1.75rem;
   margin: 1rem;
 }
