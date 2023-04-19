@@ -10,6 +10,7 @@ main {
 
 #myChart {
   grid-area: 4 / 4 / 6 / 6;
+  width: 100%;
 }
 
 .container {
