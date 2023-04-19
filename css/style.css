@@ -33,31 +33,38 @@ main {
 
 
 header {
-  background-color: whitesmoke;
+  background-color: whitesmoke; 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+  
 }
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgba(224, 245, 240, 0.3);
+  background-color: rgba(224, 245, 240, 0.3); 
   color: blue;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 12rem;
   color: rgba(84, 162, 85, 0.749);
-  line-height: .8;
+  line-height: 10
+  rem;
   margin: 3rem 0 1rem;
+ 
 }
 
 #ducklogo {
-  width: 350px;
+  width: 300px;
 }
 
 section {
   background-color: rgba(146, 188, 181, 0.3);
   padding: 2rem;
   grid-row-start: 1;
-  grid-row-end: 4;
+  grid-row-end: 6;
   grid-column-start: 1;
   grid-column-end: 6;
   display: flex;
@@ -72,7 +79,7 @@ section img {
 }
 
 section img:hover {
-  border: 5px solid rgb(9, 90, 83);
+  border: 5px solid rgba(237, 158, 12, 0.75);
   cursor: pointer;
 }
 
