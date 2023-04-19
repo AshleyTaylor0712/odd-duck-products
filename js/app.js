@@ -102,14 +102,66 @@ function handleProductClick(event) {
 }
 
 function viewResults() {
-  console.log('we are inside view results function.');
-  let ul = document.querySelector('ul');
-  for (let i = 0; i < productArray.length; i++) {
-    let li = document.createElement('li');
-    li.textContent = `${productArray[i].name} had ${productArray[i].views} views, and ${productArray[i].votes} votes.`;
-    ul.appendChild(li);
+  renderChart();
+  viewResultsBtn.removeEventListener('click', viewResults);
+}
 
+function renderChart() {
+
+  console.log(productArray[1].votes);
+
+  const ctx = document.getElementById('Chart');
+
+  let productNames = [];
+  let productVotes = [];
+  let productViews = [];
+
+  for (let i = 0; i < productArray.length; i++) {
+    console.log(productArray[i]);
+
+    productNames.push(productArray[i].name);
+    productVotes.push(productArray[i].votes);
+    productViews.push(productArray[i].views);
   }
+
+  let config = {
+    type: 'bar',
+    data: {
+      labels: productNames,
+      datasets: [
+        {
+          label: 'Product Votes',
+          data: productVotes,
+          borderWidth: 1,
+          backgroundColor: [
+            'rgb(21, 236, 164)'
+          ],
+          borderColor: [
+            'rgb(25, 117, 1, 1)'
+          ]
+        },
+        {
+          label: 'Product Views',
+          data: productViews ,
+          borderWidth: 1,
+          backgroundColor:[
+            'rgb(232, 211, 16)',
+          ],
+          borderColor: [
+            'rgb(255, 170, 0, 1)',
+          ]
+        }
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  };
+  new Chart(ctx, config);
 }
 
 renderProducts();
